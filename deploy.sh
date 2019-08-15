@@ -12,6 +12,6 @@ docker push acxmatos/multi-docker-worker:$SHA
 
 kubectl apply -f k8s
 
-kubectl set image deployments/client-deployment server=acxmatos/multi-docker-client:$SHA
+kubectl set image deployments/client-deployment client=acxmatos/multi-docker-client:$SHA
 kubectl set image deployments/server-deployment server=acxmatos/multi-docker-server:$SHA
-kubectl set image deployments/worker-deployment server=acxmatos/multi-docker-worker:$SHA
+kubectl set image deployments/worker-deployment worker=acxmatos/multi-docker-worker:$SHA
